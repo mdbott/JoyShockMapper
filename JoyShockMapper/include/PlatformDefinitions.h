@@ -4,75 +4,75 @@
 
 // https://docs.microsoft.com/en-us/windows/win32/inputdev/virtual-key-codes
 // Only use undefined keys from the above list for JSM custom commands
-constexpr uint16_t V_WHEEL_UP = 0x03;     // Here I intentionally overwride VK_CANCEL because breaking a process with a keybind is not something we want to do
-constexpr uint16_t V_WHEEL_DOWN = 0x07;   // I want all mouse bindings to be contiguous IDs for ease to distinguish
-constexpr uint16_t NO_HOLD_MAPPED = 0x0A; // Empty mapping, which is different form no mapping for combo presses
-constexpr uint16_t CALIBRATE = 0x0B;
-constexpr uint16_t GYRO_INV_X = 0x88;
-constexpr uint16_t GYRO_INV_Y = 0x89;
-constexpr uint16_t GYRO_INVERT = 0x8A;
-constexpr uint16_t GYRO_OFF_BIND = 0x8B; // Not to be confused with settings GYRO_ON and GYRO_OFF
-constexpr uint16_t GYRO_ON_BIND = 0x8C;  // Those here are bindings
-constexpr uint16_t GYRO_TRACK_X = 0x8D;
-constexpr uint16_t GYRO_TRACK_Y = 0x8E;
-constexpr uint16_t GYRO_TRACKBALL = 0x8F;
-constexpr uint16_t COMMAND_ACTION = 0x97; // Run command
-constexpr uint16_t RUMBLE = 0xE6;
+constexpr std::uint16_t V_WHEEL_UP = 0x03;     // Here I intentionally overwride VK_CANCEL because breaking a process with a keybind is not something we want to do
+constexpr std::uint16_t V_WHEEL_DOWN = 0x07;   // I want all mouse bindings to be contiguous IDs for ease to distinguish
+constexpr std::uint16_t NO_HOLD_MAPPED = 0x0A; // Empty mapping, which is different form no mapping for combo presses
+constexpr std::uint16_t CALIBRATE = 0x0B;
+constexpr std::uint16_t GYRO_INV_X = 0x88;
+constexpr std::uint16_t GYRO_INV_Y = 0x89;
+constexpr std::uint16_t GYRO_INVERT = 0x8A;
+constexpr std::uint16_t GYRO_OFF_BIND = 0x8B; // Not to be confused with settings GYRO_ON and GYRO_OFF
+constexpr std::uint16_t GYRO_ON_BIND = 0x8C;  // Those here are bindings
+constexpr std::uint16_t GYRO_TRACK_X = 0x8D;
+constexpr std::uint16_t GYRO_TRACK_Y = 0x8E;
+constexpr std::uint16_t GYRO_TRACKBALL = 0x8F;
+constexpr std::uint16_t COMMAND_ACTION = 0x97; // Run command
+constexpr std::uint16_t RUMBLE = 0xE6;
 
 constexpr const char *SMALL_RUMBLE = "R0080";
 constexpr const char *BIG_RUMBLE = "RFF00";
 
 // XInput buttons
-constexpr uint16_t X_UP = 0xE8;
-constexpr uint16_t X_DOWN = 0xE9;
-constexpr uint16_t X_LEFT = 0xEA;
-constexpr uint16_t X_RIGHT = 0xEB;
-constexpr uint16_t X_LB = 0xEC;
-constexpr uint16_t X_RB = 0xED;
-constexpr uint16_t X_X = 0xEE;
-constexpr uint16_t X_A = 0xEF;
-constexpr uint16_t X_Y = 0xF0;
-constexpr uint16_t X_B = 0xF1;
-constexpr uint16_t X_LS = 0xF2;
-constexpr uint16_t X_RS = 0xF3;
-constexpr uint16_t X_BACK = 0xF4;
-constexpr uint16_t X_START = 0xF5;
-constexpr uint16_t X_GUIDE = 0xB8;
-constexpr uint16_t X_LT = 0xD8;
-constexpr uint16_t X_RT = 0xD9;
+constexpr std::uint16_t X_UP = 0xE8;
+constexpr std::uint16_t X_DOWN = 0xE9;
+constexpr std::uint16_t X_LEFT = 0xEA;
+constexpr std::uint16_t X_RIGHT = 0xEB;
+constexpr std::uint16_t X_LB = 0xEC;
+constexpr std::uint16_t X_RB = 0xED;
+constexpr std::uint16_t X_X = 0xEE;
+constexpr std::uint16_t X_A = 0xEF;
+constexpr std::uint16_t X_Y = 0xF0;
+constexpr std::uint16_t X_B = 0xF1;
+constexpr std::uint16_t X_LS = 0xF2;
+constexpr std::uint16_t X_RS = 0xF3;
+constexpr std::uint16_t X_BACK = 0xF4;
+constexpr std::uint16_t X_START = 0xF5;
+constexpr std::uint16_t X_GUIDE = 0xB8;
+constexpr std::uint16_t X_LT = 0xD8;
+constexpr std::uint16_t X_RT = 0xD9;
 
 // DS4 buttons
-constexpr uint16_t PS_UP = 0xE8;
-constexpr uint16_t PS_DOWN = 0xE9;
-constexpr uint16_t PS_LEFT = 0xEA;
-constexpr uint16_t PS_RIGHT = 0xEB;
-constexpr uint16_t PS_L1 = 0xEC;
-constexpr uint16_t PS_R1 = 0xED;
-constexpr uint16_t PS_SQUARE = 0xEE;
-constexpr uint16_t PS_CROSS = 0xEF;
-constexpr uint16_t PS_TRIANGLE = 0xF0;
-constexpr uint16_t PS_CIRCLE = 0xF1;
-constexpr uint16_t PS_L3 = 0xF2;
-constexpr uint16_t PS_R3 = 0xF3;
-constexpr uint16_t PS_SHARE = 0xF4;
-constexpr uint16_t PS_OPTIONS = 0xF5;
-constexpr uint16_t PS_HOME = 0xB8;
-constexpr uint16_t PS_PAD_CLICK = 0xB9;
-constexpr uint16_t PS_L2 = 0xD8;
-constexpr uint16_t PS_R2 = 0xD9;
+constexpr std::uint16_t PS_UP = 0xE8;
+constexpr std::uint16_t PS_DOWN = 0xE9;
+constexpr std::uint16_t PS_LEFT = 0xEA;
+constexpr std::uint16_t PS_RIGHT = 0xEB;
+constexpr std::uint16_t PS_L1 = 0xEC;
+constexpr std::uint16_t PS_R1 = 0xED;
+constexpr std::uint16_t PS_SQUARE = 0xEE;
+constexpr std::uint16_t PS_CROSS = 0xEF;
+constexpr std::uint16_t PS_TRIANGLE = 0xF0;
+constexpr std::uint16_t PS_CIRCLE = 0xF1;
+constexpr std::uint16_t PS_L3 = 0xF2;
+constexpr std::uint16_t PS_R3 = 0xF3;
+constexpr std::uint16_t PS_SHARE = 0xF4;
+constexpr std::uint16_t PS_OPTIONS = 0xF5;
+constexpr std::uint16_t PS_HOME = 0xB8;
+constexpr std::uint16_t PS_PAD_CLICK = 0xB9;
+constexpr std::uint16_t PS_L2 = 0xD8;
+constexpr std::uint16_t PS_R2 = 0xD9;
 
-constexpr bool isControllerKey(uint16_t code)
+constexpr bool isControllerKey(std::uint16_t code)
 {
 	return (code >= X_UP && code <= X_START) || code == PS_HOME || code == PS_PAD_CLICK || code == X_LT || code == X_RT;
 }
 
 
 // Needs to be accessed publicly
-uint16_t nameToKey(std::string_view name);
+std::uint16_t nameToKey(std::string_view name);
 
 struct KeyCode
 {
-	uint16_t code = NO_HOLD_MAPPED;
+	std::uint16_t code = NO_HOLD_MAPPED;
 	std::string name = "None";
 
 	KeyCode() = default;
