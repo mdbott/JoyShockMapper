@@ -568,7 +568,7 @@ void setMouseNorm(float x, float y)
 	mouse.mouse_move_absolute(std::roundf(65535.0f * x), std::roundf(65535.0f * y));
 }
 
-bool WriteToConsole(in_string command)
+bool WriteToConsole(string_view command)
 {
 	constexpr auto STDIN_FD{ 0 };
 
@@ -706,7 +706,7 @@ std::string GetCWD()
 	return pathBuffer.get();
 }
 
-bool SetCWD(in_string newCWD) {
+bool SetCWD(string_view newCWD) {
     return chdir(newCWD.data()) != 0;
 }
 
