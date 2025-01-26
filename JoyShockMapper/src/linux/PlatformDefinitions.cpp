@@ -1,5 +1,5 @@
 #include <cstdlib>
-
+using std::uint8_t, std::uint16_t, std::uint64_t;
 #include <string>
 #include <cstring>
 #include <iostream>
